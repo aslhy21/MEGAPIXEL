@@ -1,0 +1,519 @@
+/* =========================================================
+   MEGAPIXEL - RESPONSIVE
+   Adaptación para laptop, tablet y celular
+========================================================= */
+
+
+/* =========================
+   LAPTOP / TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 0 30px;
+    }
+
+    .header-logo {
+        width: 190px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* Menú móvil */
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+
+        background: #050505;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transform: translateY(-100%);
+        transition: transform .5s ease;
+
+        z-index: 1001;
+    }
+
+    .nav.open {
+        transform: translateY(0);
+    }
+
+    .nav a {
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-logo {
+        width: min(420px, 60vw);
+    }
+
+    .hero-title {
+        font-size: clamp(65px, 11vw, 110px);
+        letter-spacing: -5px;
+    }
+
+
+    /* SECCIONES */
+
+    .intro-grid,
+    .services-heading,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+
+    /* PROCESO */
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SERVICIOS */
+
+    .service-feature,
+    .service-feature.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .service-feature.reverse .service-feature-image {
+        order: 0;
+    }
+
+
+    /* CONTACTO */
+
+    .contact-page {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .header.scrolled {
+        height: 70px;
+    }
+
+    .header-logo {
+        width: 145px;
+    }
+
+
+    /* =========================
+       MENÚ
+    ========================= */
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        padding: 100px 20px 40px;
+    }
+
+    .nav a {
+        font-size: 30px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 100svh;
+
+        padding:
+            120px 20px
+            60px;
+    }
+
+    .hero-logo {
+        width: min(290px, 85vw);
+        margin-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: clamp(48px, 15vw, 78px);
+        line-height: .84;
+        letter-spacing: -3px;
+    }
+
+    .hero-title span {
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 35px;
+        margin-top: 40px;
+    }
+
+    .hero-bottom p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .circle-button {
+        width: 115px;
+        height: 115px;
+    }
+
+    .scroll-text {
+        display: none;
+    }
+
+
+    /* =========================
+       MARQUESINA
+    ========================= */
+
+    .marquee {
+        padding: 15px 0;
+    }
+
+    .marquee-track span {
+        font-size: 28px;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    .section {
+        width: 100%;
+        padding: 85px 20px;
+    }
+
+    .section-number {
+        margin-bottom: 45px;
+    }
+
+
+    /* =========================
+       TÍTULOS
+    ========================= */
+
+    .big-heading {
+        font-size: clamp(45px, 14vw, 70px);
+        line-height: .88;
+        letter-spacing: -3px;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-copy p {
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       IMAGEN GRANDE
+    ========================= */
+
+    .feature-image {
+        width: 100%;
+        height: 65vh;
+        min-height: 480px;
+
+        margin: 20px 0;
+    }
+
+    .feature-image img {
+        width: 100%;
+        height: 110%;
+
+        object-fit: cover;
+    }
+
+    .feature-overlay {
+        padding: 30px 20px;
+    }
+
+    .feature-overlay h2 {
+        font-size: clamp(45px, 14vw, 72px);
+        letter-spacing: -3px;
+    }
+
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    .services-heading {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        margin-bottom: 60px;
+    }
+
+    .service-row {
+        grid-template-columns:
+            35px
+            1fr
+            35px;
+
+        min-height: 105px;
+
+        gap: 10px;
+    }
+
+    .service-row p {
+        display: none;
+    }
+
+    .service-row h3 {
+        font-size: clamp(23px, 7vw, 34px);
+    }
+
+    .arrow {
+        font-size: 25px;
+    }
+
+
+    /* =========================
+       PORTAFOLIO INDEX
+    ========================= */
+
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin-bottom: 55px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .project-down {
+        margin-top: 0;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 16 / 10;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
+
+
+    /* =========================
+       PROCESO
+    ========================= */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        margin-top: 60px;
+    }
+
+    .process-item {
+        min-height: 220px;
+        margin-bottom: -1px;
+    }
+
+    .process-item h3 {
+        margin-top: 55px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+        min-height: 70vh;
+
+        padding:
+            90px 20px;
+    }
+
+    .cta h2 {
+        font-size: clamp(52px, 15vw, 82px);
+        line-height: .83;
+        letter-spacing: -4px;
+    }
+
+    .cta h2 span {
+        -webkit-text-stroke: 1px #fff;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        padding:
+            60px 20px
+            30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 45px;
+    }
+
+    .footer-logo {
+        width: min(280px, 80vw);
+    }
+
+    .footer-menu {
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    /* No usar cursor de PC
+       en pantalla táctil */
+
+    .cursor,
+    .cursor-follow {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .header {
+        padding: 0 15px;
+    }
+
+    .header-logo {
+        width: 135px;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-logo {
+        width: 250px;
+    }
+
+    .hero-title {
+        font-size: clamp(44px, 15vw, 64px);
+        letter-spacing: -2px;
+    }
+
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .big-heading {
+        font-size: clamp(40px, 13vw, 58px);
+    }
+
+    .feature-overlay {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* =========================================================
+   DISPOSITIVOS TÁCTILES
+========================================================= */
+
+@media (hover: none) {
+
+    .cursor,
+    .cursor-follow {
+        display: none !important;
+    }
+
+    .project-card:hover .project-image img {
+        transform: none;
+    }
+
+    .portfolio-item:hover img {
+        transform: none;
+    }
+}
